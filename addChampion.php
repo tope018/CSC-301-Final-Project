@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="index.css">
     <title>
-        Home Page
+        Add Champion Page
     </title>
     <style>
         .textwrap {
@@ -11,7 +11,7 @@
             margin: 10px;
         }
     </style>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
 </head>
 
 <body>
@@ -29,24 +29,8 @@
     </div>
     <div class="right-box">
         <div class="wrapper">
-        <h1>Keep Track Of Your Champs</h1>
-        <br>
-        <img src="ekko.jpg" style="width:297px; height:167px">
-        <img src="caitlyn.jpg" style="width:297px; height:167px">
-        <img src="braum.jpg" style="width:297px; height:167px">
-        <img src="ahri.jpg" style="width:297px; height:167px">
-        <br>
-        <h2>Champion Info At Your FingerTips</h2>
-        <p>
-            Playing champions is fun, but how do your different champions compare?
-            Which champion do you play the best? Which champion do you play the worst?
-            Through the use of this website, you are able to input any champion you play,
-            along with updating how many times you win and lose for each champion. Using the
-            side navigation bar, you can view your winrates for each champion, allowing you to
-            see which champions you perform best with.
-        </p>
+
         </div>
     </div>
-    
 </body>
 </html>
