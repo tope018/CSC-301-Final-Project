@@ -1,3 +1,10 @@
+<?php
+
+//include configuration file
+include('config.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +18,34 @@
             margin: 10px;
         }
     </style>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body>
     <div class="left-box">
         <div class="icon">
-            <img src="kalista%20icon.png" alt="Kalista Icon"
+            <img src="Images/kalista%20icon.png" alt="Kalista Icon"
                  style="width:200px; height:200px">
         </div>
-        <ul class="side-nav" role="menubar" title="Link List">
+        <ul role="menubar" title="Link List">
             <li role="menuitem"><a class="nav" href="index.php">Home</a></li>
             <li role="menuitem"><a class="nav" href="addChampion.php">Add Champion</a></li>
             <li role="menuitem"><a class="nav" href="editChampion.php">Edit Champion</a></li>
             <li role="menuitem"><a class="nav" href="viewWinrate.php">View Winrate</a></li>
+            <li role="menuitem"><a class="nav" href="logout.php">Logout</a></li>
         </ul>
     </div>
     <div class="right-box">
         <div class="wrapper">
-        <h1>Keep Track Of Your Champs</h1>
+        <h1>Welcome <?php echo $_SESSION["username"] ?>!!</h1>
         <br>
-        <img src="ekko.jpg" style="width:297px; height:167px">
-        <img src="caitlyn.jpg" style="width:297px; height:167px">
-        <img src="braum.jpg" style="width:297px; height:167px">
-        <img src="ahri.jpg" style="width:297px; height:167px">
+        <img src="Images/ekko.jpg" style="width:297px; height:167px">
+        <img src="Images/caitlyn.jpg" style="width:297px; height:167px">
+        <img src="Images/braum.jpg" style="width:297px; height:167px">
+        <img src="Images/ahri.jpg" style="width:297px; height:167px">
         <br>
         <h2>Champion Info At Your FingerTips</h2>
         <p>

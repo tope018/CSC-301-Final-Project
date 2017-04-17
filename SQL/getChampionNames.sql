@@ -1,0 +1,1 @@
+SELECT ChampionName FROM champion

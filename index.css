@@ -36,7 +36,8 @@ div.left-box {
 }
 
 div.right-box {
-    margin-left: 190px;
+    text-align: center;
+    margin-left: 20%;
     min-width: 900px;
     max-width: 900px;
 }
@@ -49,100 +50,32 @@ h1 {
     padding-bottom: 20px;
 }
 
-div.center {
-    text-align: center;
-    width: 500px;
-    height: auto;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-div.right {
-    text-align: center;
-    width: 500px;
-    height: auto;
-    float: left;
-    margin-left: 10px;
-}
-
-#gallery, #video-gallery {
-    position: relative;
-}
-#gallery ul, #video-gallery {
-    width: 450px;
-    list-style-type: none;
-}
-#gallery li, #video-gallery li {
-    display: inline-block;
-    padding: 10px;
-}
-#gallery img {
-    border-style: none;
-}
-#gallery a {
-    text-decoration: none;
-    color: #333;
-    font-style: italic;
-}
-#gallery span {
-    display: none;
-}
-#gallery a:hover span {
-    top: 30px;
-    left: 400px;
-    display: block;
-    position: absolute;
-    text-align: center;
-}
-.order ul {
-    width: 600px;
-    list-style-type: none;
-}
-.order li {
-    display: inline-block;
-}
 .wrapper {
     width: 80%;
     margin: auto;
 }
 
-.horizontal-line {
-    border-top: black solid 2px;
-    border-bottom: black solid 2px;
-}
-.bottom-margin {
-    margin-bottom: 10px;
+.outer {
+    display: inline-block;
 }
 
-#videoDiv2 {
-    text-align: left;
-    width: 640px;
+
+td {
+    padding: 15px;
+    border: 1px solid black;
+    background-color: #d3d3d3;
 }
-#videoDiv2 h2 {
-    text-align: center;
+
+th {
+    padding: 15px;
+    border: 4px solid black;
+    background-color: #000000;
+    color: #fafafa;
 }
-#video-gallery {
-    text-align: center;
-    width: 640px;
+
+table {
+    width: 60%;
+    margin-left: 20%;
 }
-#video-gallery img:hover {
-    opacity: 0.5;
-}
-div.commonBuilds {
-    background-color: black;
-    color: #00EFFF;
-    padding: 5px 5px 5px 10px;
-    width: 700px;
-    border: green solid 3px;
-}
-img.commonBuilds {
-    width: 85%;
-}
-#footer {
-    text-align: left;
-    color: cyan;
-    display: block;
-    margin-top: 50px;
-    margin-left: 45px;
-}
+
+

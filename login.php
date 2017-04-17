@@ -1,42 +1,26 @@
 <?php
 
 // Create and include a configuration file with the database connection
-//include('config.php');
+include('config.php');
 
 // Include functions for application
 //include('functions.php');
 
-// If form submitted:
-/*
+//If form submitted:
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get username and password from the form as variables
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Query records that have usernames and passwords that match those in the customers table
-    $sql = file_get_contents('sql/attemptLogin.sql');
-    $params = array(
-        'username' => $username,
-        'password' => $password
-    );
-    $statement = $database->prepare($sql);
-    $statement->execute($params);
-    $users = $statement->fetchAll(PDO::FETCH_ASSOC);
+    //set a session variable with a key of username equal to the username returned
+    $_SESSION['username'] = $username;
 
-    // If $users is not empty
-    if(!empty($users)) {
-        // Set $user equal to the first result of $users
-        $user = $users[0];
-
-        // Set a session variable with a key of customerID equal to the customerID returned
-        $_SESSION['customerID'] = $user['customerid'];
-
-        // Redirect to the index.php file
-        header('location: index.php');
-    }
+    //redirect to the index.php file
+    header('location: index.php');
 
 }
-*/
+
 ?>
 
 <!doctype html>
@@ -60,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 <div class="left-box">
     <div class="icon">
-        <img src="kalista%20icon.png" alt="Kalista Icon"
+        <img src="Images/kalista%20icon.png" alt="Kalista Icon"
              style="width:200px; height:200px">
     </div>
     <ul class="side-nav" role="menubar" title="Link List">
@@ -68,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li role="menuitem"><a class="nav" href="addChampion.php">Add Champion</a></li>
         <li role="menuitem"><a class="nav" href="editChampion.php">Edit Champion</a></li>
         <li role="menuitem"><a class="nav" href="viewWinrate.php">View Winrate</a></li>
+        <li role="menuitem"><a class="nav" href="logout.php">Logout</a></li>
     </ul>
 </div>
 <div class="right-box">
