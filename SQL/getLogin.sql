@@ -1,0 +1,1 @@
+SELECT 1 FROM login WHERE login.Username = :username AND login.Password = :password

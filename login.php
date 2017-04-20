@@ -13,11 +13,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    //set a session variable with a key of username equal to the username returned
-    $_SESSION['username'] = $username;
+    $sql = file_get_contents("SQL/getLogin.sql");
+    $params = array(
+            'username' => $username,
+            'password' => $password
+    );
+    $statement = $database->prepare($sql);
+    $statement->execute($params);
+    $data = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    //redirect to the index.php file
-    header('location: index.php');
+    if($data == NULL) {
+        header('location: login.php');
+    }
+
+    else {
+        //set a session variable with a key of username equal to the username returned
+        $_SESSION['username'] = $username;
+
+        //redirect to the index.php file
+        header('location: index.php');
+    }
 
 }
 
